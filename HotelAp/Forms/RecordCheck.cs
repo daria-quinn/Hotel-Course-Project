@@ -77,8 +77,8 @@ namespace HotelAp
 
         private void btnCashVoucher_Click(object sender, EventArgs e)
         {
-            Forms.CashVoucher cashVoucher = new Forms.CashVoucher();
-            cashVoucher.Show();
+           // Forms.CashVoucher cashVoucher = new Forms.CashVoucher();
+            //cashVoucher.Show();
         }
     }
 }

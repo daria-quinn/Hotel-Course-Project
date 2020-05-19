@@ -15,9 +15,8 @@ namespace HotelAp.Forms
     public partial class CashVoucher : Form
     {
         public int nRecord;
-        public CashVoucher(int nRecord);
-        public CashVoucher()
-        {
+        public CashVoucher(int nRecord) {
+            this.nRecord = nRecord;
             InitializeComponent();
         }
 
@@ -26,7 +25,9 @@ namespace HotelAp.Forms
             ActionWithDB api = new ActionWithDB();
             int nRecord = api.getRecordID();
             api.ProofOfPurchaseInfAboutRecords(nRecord);
-            
+            ReportParameter[] parametrs = new ReportParameter[1];
+            parametrs[0] = new ReportParameter("ReportParametrnRecord", nRecord.ToString());
+            //reportViewer1.LocalReport.SetParameters(new ReportParameter("ReportParametrnRecord", nRecord.ToString()));
 
             this.reportViewer1.RefreshReport();
         }

@@ -322,7 +322,7 @@ namespace HotelAp
                     int NService = int.Parse(nService);
 
                     api.addRecordOfService(NService, NRecord);
-                    MessageBox.Show("Номер успешно куплен на дату с ", "Успешно", MessageBoxButtons.OK,
+                    MessageBox.Show("Услуги приобретена успешно!", "Успешно", MessageBoxButtons.OK,
                MessageBoxIcon.Information);
                 }
                 else
